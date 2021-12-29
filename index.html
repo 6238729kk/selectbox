@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js" defer></script>
+  <!-- highChart -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+</head>
+<body>
+    <div class="fixedArea">
+      <div class="Header">
+        <div class="samepadding">
+          <span>Name</span>
+          <span class="state">state</span>
+        </div>
+      </div>
+      <div class="select">
+        <div class="samepadding">
+          <div class="selectYearAndMonth">
+            <div class="selectYear">
+              <button class="yearLabel"></button>
+              <ul class="yearList">
+              </ul>
+            </div>
+              <div class="selectMonth">
+                <button class="monthLabel"></button>
+                <ul class="monthList">
+                </ul>
+              </div>
+          </div>
+          <div class="selectDay">  </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="scrollArea">
+<!-- <div class="test" hidden> -->
+      <div class="test">
+        <span class="selectedYearVal"></span>
+        <span class="selectedMonthVal"></span>
+        <span class="selectedDayVal"></span>
+      </div>
+    </div>
+</body>
+</html>

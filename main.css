@@ -1,0 +1,292 @@
+body{
+  background-color: rgb(0,0,0);
+  color: white;
+  margin: 0;
+  /* height: 100vh; */
+}
+.fixedArea {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: rgb(0,0,0);
+  width: 100%;
+}
+
+.fixedArea .grid-item, .Header, .select, .chart, .Alarm, .Operation {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  /* font-size: 30px; */
+  text-align: center;
+}
+
+.Header {
+  grid-column: 1 / 3;
+	grid-row: 2 ;
+  border: 0px;
+  border-bottom:5px solid rgb(30,30,30);
+}∫
+.samepadding{
+  padding: 10px;
+
+  /* background-color: blueviolet; */
+}
+
+.select {
+  grid-column: 1 / 3;
+	grid-row: 3 ;
+  border-bottom:10px solid rgb(30,30,30);
+}
+
+.selectDay {
+  padding: 10px;
+  height: 100%;
+  white-space:nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /*font-size: 2rem;*/
+
+}
+.selectDay li.selected{
+  background-color: rgb(99,134,241);
+  color:rgb(0,0,0);
+  border-radius: 10px;
+}
+
+.selectDay ul{
+  list-style-type: none;
+  color:#ffff;
+  display: inline-block;
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.selectDay li{
+  color:#ffff;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+.scrollArea {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 300px;
+
+}
+
+.barChart{
+  /* height: 120px; */
+}
+.barChart span{
+  color: rgb(133,133,133);
+  font-weight: bold;
+}
+figure{
+  height: 100%;
+  /* margin-left: 100px; */
+  /* margin-inline-start: 20px;
+  margin-inline-end: 20px; */
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.chart {
+  grid-column: 1 / 3;
+	grid-row: 2 ;
+
+}
+.Alarm {
+  grid-column: 1 / 3;
+	grid-row: 6 ;
+
+}
+.Operation {
+  grid-column: 1 / 3;
+	grid-row: 5 ;
+
+}
+
+
+.grid-item1, .grid-item2{
+	grid-row: 3 ;
+  background-color: #2B2D32;
+  border-radius: 20px;
+  padding: 10px 10px 20px 20px;
+  margin: 20px;
+}
+
+/* #container2 {
+  height: 100%;
+  width: 100%;
+} */
+
+.grid-item3, .grid-item4{
+
+	grid-row: 4 ;
+  display: flex;
+  background-color: #2B2D32;
+  border-radius: 20px;
+  padding: 10px 10px 20px 20px;
+  margin: 20px;
+
+}
+.dInnerFlex{
+  width: 80%;
+  margin: 5px;
+}
+.dInnerFlex span{
+  font-weight: bold;
+  font-size: 30px;
+
+}
+
+.d5{
+  /* height: 90px; */
+  background-color: rgb(92,19,8);
+  /* width: 90%; */
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(204,30,4);
+  font-size: 1.2rem;
+  padding: 20px;
+
+
+  /* white-space:nowrap;
+  overflow-y: scroll;
+  overflow-x: hidden; */
+}
+.d5_data{
+  text-align: left;
+  font-size: 2rem;
+}
+.d5_data div{
+  margin-bottom: 10px;
+}
+.errDate{
+  color: white;
+  font-size: 1.3rem;
+}
+
+
+
+.selectYearAndMonth{
+  display: flex;
+  width: 40%;
+}
+
+.selectYearAndMonth ul{
+  /* min-width: 85.8px; */
+  /* width: auto; */
+  background-color: rgb(90, 90, 105);
+  /* overflow: scroll; */
+  border-radius: 1.65px;
+  /* height: 115.5px; */
+  display: block;
+  margin: 12px 0px 0px;
+}
+
+.selectYear
+,.selectMonth  * {
+  box-sizing: border-box;
+}
+
+.selectYear,
+.selectMonth {
+  position: relative;
+  width: 150px;
+  /* height: 35px; */
+  /* border-radius: 0px; */
+  border: 4px solid rgb(28,28,32);
+  /* 아이콘 여기에 */
+  /* background: url(./assets/btn_drop_down_default.png) calc(100% - 7px) center no-repeat; */
+  background-size: 30px;
+  /* 배경 사이즈, 폭 */
+  cursor: pointer;
+}
+
+.selectYear::after,
+.selectMonth:after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 38px;
+}
+
+/* 선택된 라벨부분  */
+
+.selectYear .yearLabel,
+.selectMonth .monthLabel {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.selectYear .yearList,
+.selectMonth .monthList {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  background: rgb(90, 90, 105);
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  /* border-radius: 6px; */
+  overflow: hidden;
+  max-height: 0;
+  transition: .1s ease-in;
+}
+
+.selectYear.active .yearList,
+.selectMonth.active .monthList {
+  max-height: 500px;
+}
+
+.selectYear .yearItem,
+.selectMonth .monthItem {
+  /* border-bottom: 1px dashed rgb(170, 72, 72); */
+  border-radius: 6px;
+  padding: 10px 15px 5px;
+  transition: .1s;
+}
+
+.selectYear .yearItem:hover,
+.selectMonth .monthItem:hover {
+  background: rgb(9, 225, 255);
+}
+
+.selectYear .yearItem:last-child,
+.selectMonth .monthItem:last-child {
+  border-bottom: 0 none;
+}
+
+
+/* // 스크롤 커스텀 */
+.selectMonth .optionList::-webkit-scrollbar {width: 6px;}
+.selectMonth .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectMonth .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectMonth .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+
+/* .selectMonth2 .optionList2::-webkit-scrollbar {width: 6px;}
+.selectMonth2 .optionList2::-webkit-scrollbar-track {background: transparent; }
+.selectMonth2 .optionList2::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectMonth2 .optionList2::-webkit-scrollbar-thumb:hover {background: #303030;} */
